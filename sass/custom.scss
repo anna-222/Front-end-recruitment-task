@@ -3,17 +3,6 @@
     padding: 0;    
 }
 
-.home{
-    display: flex;
-    position: relative;
-    width: 1440px;
-    height: 1540px;
-    margin: 0 auto;
-    background: #f5f5f7;
-
-  
-
-
 p{
     font-size: 14px;
 }
@@ -25,6 +14,26 @@ a {
 }
 
 
+.home{
+    display: flex;
+    position: relative;
+    width: 1440px;
+    height: 1540px;
+    margin: 0 auto;
+    background: #f5f5f7;
+  
+    .menuImg{
+    position: absolute;
+    top:0;
+    left: 0; 
+    }
+    .logoImg{
+    position: absolute;
+    top:0;
+    left: 0; 
+    }
+  
+
 
     .navbar{ 
         display: flex;
@@ -34,10 +43,10 @@ a {
                     display: flex;
                     width: 162px;
                     font-size: 24px;
-                    position: absolute;  
-                    background: pink;
+                    position: absolute;
                     top: 56px;
-                    left: 71px;    
+                    left: 71px;
+                    font-family: "Poppins"; 
             }
 
             &__menu{
@@ -116,8 +125,110 @@ a {
             }
     
     }
+
+    .mainContent{
+        display: flex;
+        position: absolute;
+        top:215px;
+        left:162px;
+        flex-direction: column;
+
+        &__title{
+            font-size: 48px;
+            width: 462px;
+            font-family: "Poppins";
+            color: rgb(29, 29, 29);
+            font-weight: bold;
+            line-height: 1.271;
+            text-align: left;
+            margin-bottom:55px;
+        }
+
+        &__text{
+            font-family: "Poppins";
+            font-size: 18px;
+            color: #9c9c9c;
+            line-height: 1.2;
+            width: 566px;
+            height: 82px;
+            padding-bottom: 1rem;
+            margin-bottom: 64px;
+        }
+        
+        .mainContent__watch{
+            position: absolute;
+
+            .video__line{
+                position: absolute;
+                left: -162.5px;
+                top: 70px;
+
+            }
+
+            .mainContent__text{
+                position: absolute;
+                top: 55px;
+                left: 149px;
+                font-size: 18px;
+                font-family: "Poppins";
+                color: rgb(15, 110, 255);
+
+                .mainContent__text--watch{
+                    position: absolute;
+                    display: block;
+                    height: 1.25px;
+                    width:49px;
+                    background: rgb(138, 173, 255);
+                }
+            }
+
+            .modalVideo{
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: 300ms ease-in-out; 
+                border-radius: 7px;
+                z-index: 10;
+                background:#707071;
+                max-width: 80%;
+                padding: 5px;
+
+                .modalVideo__close{
+                    display: block;
+                    font-size: 18px;
+                    font-family: "Poppins";
+                    color: white;
+                    border: 1px solid rgb(15, 110, 255);
+                    padding: 8px;
+                    margin-top: 1rem;
+                    cursor: pointer;
+                    background: rgb(15, 110, 255);
+                    // width: ;
+                }
+
+
+            }
+
+            .modalVideo.activeModal{
+                transform: translate(-50%, -50%) scale(1);
+            }
+           
+        }
+       
+          
+       
+    }
+
 }
 
+
+  
+
+
+  
 
 
 
