@@ -336,8 +336,8 @@ body{
                 
 
                 .firstButton{
-                    color: white;
-                    border: 1px solid white;
+                    color:rgb(255, 255, 255);
+                    border: 1px solid rgb(255, 255, 255);
                     width: 60px;
                     height: 60px;
                     border-radius: 50%;
@@ -346,8 +346,18 @@ body{
                     line-height: 1.2;
                     margin-top: 45px;
                 }
+                .firstButtonLine{
+                    position: absolute;
+                    display: inline;
+                    top: 305px;
+                    left:56px;
+                    height: 1.5px;
+                    width:10px;
+                    background: rgb(255, 255, 255);
+                    z-index: 12;
+                }
 
-                .firstButton:hover{
+                .firstButton:hover {
                     color: rgb(15, 110, 255);
                 }
 
