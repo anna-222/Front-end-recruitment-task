@@ -13,6 +13,10 @@ a {
     color: rgb(29, 29, 29);
 }
 
+body{
+    background: pink;
+}
+
 
 .home{
     display: flex;
@@ -21,16 +25,19 @@ a {
     height: 1540px;
     margin: 0 auto;
     background: #f5f5f7;
+    // z-index: 1;
   
     .menuImg{
     position: absolute;
     top:0;
-    left: 0; 
+    left: 0;
     }
+    
     .logoImg{
     position: absolute;
     top:0;
     left: 0; 
+    z-index: 0;
     }
   
 
@@ -83,6 +90,10 @@ a {
                             left: 908.391px;
                             top: 60px;
                             z-index: 90;
+
+                            span.phone{
+                                color: rgb(15, 110, 255) ;
+                            }
                           }
 
 
@@ -107,7 +118,7 @@ a {
                             position: absolute;
                             border: 1px solid ;   
                             border-color: rgb(15, 110, 255);
-                            color: rgb(15, 110, 255) ;
+                            
                             border-radius: 21px;
                             width: 134px;
                             height: 41px;
@@ -158,10 +169,11 @@ a {
         .mainContent__watch{
             position: absolute;
 
+
             .video__line{
                 position: absolute;
                 left: -162.5px;
-                top: 70px;
+                top: 63px;
 
             }
 
@@ -176,7 +188,7 @@ a {
                 .mainContent__text--watch{
                     position: absolute;
                     display: block;
-                    height: 1.25px;
+                    height: 1.75px;
                     width:49px;
                     background: rgb(138, 173, 255);
                 }
@@ -187,11 +199,12 @@ a {
                 display: flex;
                 flex-direction: column;
                 top: 50%;
-                left:50%;
-                transform: translate(-50%, -50%) scale(0);
+                left: 50%;
+                transform: translate(-50%, -50%);
+                visibility: hidden;
                 transition: 300ms ease-in-out; 
                 border-radius: 7px;
-                z-index: 10;
+                z-index: 9;
                 background:#707071;
                 max-width: 80%;
                 padding: 5px;
@@ -206,27 +219,261 @@ a {
                     margin-top: 1rem;
                     cursor: pointer;
                     background: rgb(15, 110, 255);
-                    // width: ;
                 }
 
 
             }
 
             .modalVideo.activeModal{
-                transform: translate(-50%, -50%) scale(1);
+                visibility: visible;
             }
            
         }
        
+
+          
           
        
     }
 
+    .blog{
+        position: absolute;
+        top: 916px;
+        left: 196px;
+
+        &__title{
+            font-size: 14px;
+            font-family: "Poppins";
+            color: rgb(15, 110, 255);
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        &__description{
+            font-size: 36px;
+            font-family: "Poppins";
+            color: rgb(29, 29, 29);
+            font-weight: bold;
+            line-height: 1.333;
+            text-align: left;
+            margin-bottom: 80px;
+        }
+        &__line{
+            position: absolute;
+            left: 405px;
+            top: 40px;
+            display: inline;
+            height: 1.75px;
+            width:216px;
+            background: rgb(138, 173, 255);
+        }
+
+        &__news{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+           
+
+            .blog__news--item{
+                // position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 291px;
+                height: 361px;border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                border-bottom-left-radius: 25px;
+                margin-right: 48px;
+                padding-left: 41px;
+                padding-top: 43px;
+
+                .newsData{
+                    font-size: 14px;
+                    font-family: "Poppins";
+                    color: rgba(102, 102, 102);
+                    margin-top: 16px;
+                }
+
+              
+                
+            }
+            
+
+            .blog__news--item.blog__news-first{
+  
+               background: rgba(29, 29, 29);
+               z-index: 10;
+
+                .firstAutor{
+                    font-size: 18px;
+                    font-family: "Poppins";
+                    color: rgb(255, 255, 255);
+                    line-height: 1.611;
+                    
+                }
+                .firstTitle{
+                    font-size: 18px;
+                    margin-top: 33px;
+                    font-family: "Poppins";
+                    color: rgb(255, 255, 255);
+                    width: 169px;
+                }
+                  
+                
+
+                .firstButton{
+                    color: white;
+                    border: 1px solid white;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    font-family: "Poppins";
+                    font-size: 12px;
+                    line-height: 1.2;
+                    margin-top: 45px;
+                }
+
+                .firstButton:hover{
+                    color: rgb(15, 110, 255);
+                }
+
+                
+
+            }
+
+            .blog__news--item.blog__news-second{
+                background: white;
+              
+                .newsInfo{
+                    display: flex;
+                    width: 208px;
+                    flex-direction: row;
+                    padding-bottom: 25px;
+                    border-bottom: 1px solid rgb(29, 29, 29);
+                    margin-bottom: 25px;
+                    
+                    .newsInfo__avatar{
+                        display: flex;
+                        margin-right: 20px;
+                        width: 60px;
+                    }
+                    .secondAutor{
+                        font-size: 14px;
+                        font-family: "Poppins";
+                        color: rgb(29, 29, 29);
+                        font-weight: bold;
+                        line-height: 1.2;
+                    }
+                }   
+                  
+
+                .secondTitle{
+                    font-size: 14px;
+                    font-family: "Poppins";
+                    color: rgb(29, 29, 29);
+                    line-height: 1.571;
+                    padding-bottom: 5px;
+                }
+                .secondDescription{
+                    font-size: 12px;
+                    font-family: "Poppins";
+                    color: rgba(102, 102, 102);
+                    line-height: 1.571;
+                    margin-bottom: 4px;
+                    margin-top: 7px;
+                }
+
+                .newsLink{
+                    font-size: 12px;
+                    font-family: "Poppins";
+                    color: rgb(15, 110, 255);
+                    text-decoration: underline;
+                    line-height: 1.583;
+                    border-top: 11px;
+                }
+
+            }
+           
+        }
+
+    }
+
+    .leftDots{
+        position: absolute;
+        left: 1227px;
+        top: 1066px;
+        width: 187px;
+        height: 133px;
+    }
+    .ellipse7{
+        position: absolute;
+        right: 66px;
+        top: 467px;
+
+    }
+    .line11{
+        position: absolute;
+        left: 0px;
+        top: 1357px;
+        z-index: 12;
+    }
+
+    .image1{
+        position: absolute;
+        left: 931px;
+        top: 176px;    
+    }
+    .image3{
+        position: absolute;
+        left: 1013px;
+        top: 467px;
+   
+    }
+    .image2{
+        position: absolute;
+        left: 513px;
+        top: 467px;
+    }
+
+    .circleLeft{
+        position: absolute;
+        left: 896px;
+        top: 752px;
+    }
+    .elipse9{
+        display: flex;
+        position: absolute;
+        left: 1152px;
+        top: 1025px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        
+    }
+    .ellipse56{
+        position: absolute;
+        left: 120px;
+        top: 1068px;
+        left: 120px;
+        top: 1068px;
+        width: 101px;
+        height: 101px;
+        z-index: 9;
+    }
+
 }
+
+  
+  
+  
 
 
   
 
+  
+
+  
+  
+  
 
   
 
