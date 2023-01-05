@@ -67,6 +67,19 @@ body{
                 font-family: "Poppins";
                 line-height: 1.2;
 
+                .navbar__list--item.active{
+                    position: relative;
+                    &:after{
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        content: "|";
+                    }
+                    color:rgb(15, 110, 255);
+                    font-weight: bold;
+                }
+                
+
             }
 
             &__contact{
@@ -79,6 +92,8 @@ body{
                     .navbar__list{
                         display: flex;
                         flex-direction: row;
+
+                       
 
                         .navbar__list--contact {
                             font-size: 14px;
